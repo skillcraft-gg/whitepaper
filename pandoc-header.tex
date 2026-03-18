@@ -1,0 +1,17 @@
+\usepackage{eso-pic}
+\usepackage{tikz}
+
+\definecolor{skillcraftStripeOne}{HTML}{90FEFE}
+\definecolor{skillcraftStripeTwo}{HTML}{2CFEFF}
+\definecolor{skillcraftStripeThree}{HTML}{FDE330}
+
+\AtBeginDocument{\let\maketitle\relax}
+
+\AddToShipoutPictureBG*{
+  \begin{tikzpicture}[remember picture, overlay]
+    \coordinate (origin) at (current page.south west);
+    \fill[skillcraftStripeOne] ([xshift=0.10cm,yshift=0cm]origin) rectangle ([xshift=0.45cm,yshift=\paperheight]origin);
+    \fill[skillcraftStripeTwo] ([xshift=0.45cm,yshift=0cm]origin) rectangle ([xshift=0.80cm,yshift=\paperheight]origin);
+    \fill[skillcraftStripeThree] ([xshift=0.80cm,yshift=0cm]origin) rectangle ([xshift=1.15cm,yshift=\paperheight]origin);
+  \end{tikzpicture}
+}
