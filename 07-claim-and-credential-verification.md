@@ -22,7 +22,16 @@ GitHub Actions in the credentials repository validate the claim in deterministic
 2. load target credential definition,
 3. verify source repository access,
 4. verify claimed commits and proof availability,
-5. evaluate requirements (`min_commits`, `skill`, `loadout`, `and|or`).
+5. evaluate requirements (`min_commits`, `min_repositories`, `skill`, `loadout`, `agent`, `model`, and nested `and`/`or` expressions).
+
+Requirements are expressed as expression trees:
+
+- top-level shorthand fields are implicit `and` clauses,
+- `and` requires every child node,
+- `or` requires at least one child node,
+- `agent` requires matching `agent.provider` in proven proofs,
+- `model` requires matching `model.provider` and/or `model.name` in proven proofs,
+- `min_repositories` enforces unique proof repository count.
 
 On success, the claim state transitions and issuance artifacts are written into
 `issued/users/<github>/<owner>/<slug>/credential.yaml`, and registry indexes are refreshed.
