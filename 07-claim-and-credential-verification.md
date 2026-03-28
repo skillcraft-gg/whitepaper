@@ -8,7 +8,7 @@ A claim is typically submitted by the CLI with:
 
 `skillcraft claim <credential-id>`
 
-The command creates an issue in `skillcraft-gg/credentials` using structured payload data:
+The command creates an issue in `skillcraft-gg/credential-ledger` using structured payload data:
 - claimant identity,
 - target credential id,
 - source repositories,
