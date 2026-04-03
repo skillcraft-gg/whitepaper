@@ -9,6 +9,7 @@ The capture sequence is:
 2. An integration records a local skill event.
 3. A commit hook materializes one or more proof objects in the proof branch.
 4. The commit contains a reference trailer to the proof.
+5. `skillcraft verify` parses trailer references and validates referenced proof objects.
 
 The proof payload includes commit hash, captured skills, optional loadout context, and timestamp.
 

@@ -14,4 +14,4 @@ This whitepaper documents:
 - evidence and claim data flow,
 - security and trust assumptions,
 - current implementation status,
-- and near-term roadmap to fully operationalize public loadout and route surfaces.
+- and concrete implementation status of public surfaces.

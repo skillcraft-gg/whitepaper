@@ -47,12 +47,14 @@ Claims are verified by GitHub Actions, and successful results write issued artif
 ### Public Site (`skillcraft-gg.github.io`)
 
 The site repository is static and serves public content for:
-- `/`, `/docs`,
+- `/`, user-facing documentation at https://skillcraft.gg/docs (produced via a separate docs build),
 - `/skills`, `/skills/<owner>/<slug>`,
-- `/loadouts`, `/loadouts/<owner>/<slug>`,
-- `/credentials`, `/credentials/users/<github>`.
+- `/credentials`, `/credentials/<owner>/<slug>`, and profile detail routes.
+
+Route coverage is complete for the skills and credentials surfaces listed above; `/loadouts` routes are currently outside the current system surface and remain on the roadmap.
 
 Builds are triggered from registry changes and intended to validate schema, references, and required files before publishing to GitHub Pages.
+This design intentionally treats registry repos as separate upstream sources, so publication behavior follows their update cadence and build trigger timing.
 
 The architectural result is a distributed but tightly patterned system:
 local evidence capture, central registry definitions, and public static publication.

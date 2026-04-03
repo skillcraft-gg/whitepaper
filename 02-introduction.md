@@ -17,7 +17,7 @@ Skillcraft supports this through a small set of public repos and explicit data c
 2. The `skills` registry defines what capabilities exist.
 3. The `loadouts` registry defines reusable capability bundles.
 4. The `credentials` registry defines what counts as validated proof.
-5. The `skillcraft-gg.github.io` site renders all public registry artifacts.
+5. The `skillcraft-gg.github.io` site renders implemented public registry artifacts.
 
 This whitepaper intentionally stays practical.
 It emphasizes not only architecture intent, but also what currently runs, what remains partial, and where verification quality is strongest.

@@ -14,6 +14,8 @@ The command creates an issue in `skillcraft-gg/credential-ledger` using structur
 - source repositories,
 - list of commit hashes used as evidence anchors.
 
+The CLI performs local preflight checks before opening the issue: it warns on unpushed evidence commits and blocks duplicate issued claims for the same credential and claimant.
+
 ### Credential Pipeline
 
 GitHub Actions in the credentials repository validate the claim in deterministic steps:
@@ -23,6 +25,8 @@ GitHub Actions in the credentials repository validate the claim in deterministic
 3. verify source repository access,
 4. verify claimed commits and proof availability,
 5. evaluate requirements (`min_commits`, `min_repositories`, `skill`, `loadout`, `agent`, `model`, and nested `and`/`or` expressions).
+
+This flow is reflected in runtime status in the issue labels and deterministic policy outcomes that move issues through verification and issuance states.
 
 Requirements are expressed as expression trees:
 

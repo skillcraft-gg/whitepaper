@@ -19,10 +19,7 @@ Generated indexes and site pages expose public output for discovery and inspecti
 
 ### Current Risks
 
-- Proof verification in CLI paths can be improved for stricter schema and identifier checks.
-- Public loadout registry content is incomplete, weakening ecosystem breadth.
-- Route wiring and content rendering for `/skills`, `/loadouts`, `/credentials`, and `/docs` are still partially placeholder oriented in parts of the site.
-- Stale or unavailable source registries can affect publish determinism.
+- Proof verification is implemented in CLI paths; remaining work is stricter schema enforcement and cross-boundary identifier consistency checks.
 
 ### Mitigation Principles
 

@@ -13,9 +13,5 @@ Commit proofs can then include active loadouts and provide better signal than st
 The design does not require loadouts for every use case.
 Loadouts are optional, yet intended as the practical path from isolated capabilities to role-level evidence.
 
-At present, this layer is partially implemented:
-- CLI loadout context operations are present,
-- publish flow for loadouts exists,
-- but the public loadout registry dataset is still incomplete.
-
-That gap matters because it keeps the model theoretically sound but not fully discoverable for all users yet.
+Loadout context operations (`loadout use`, `loadout clear`) and `loadout share` are implemented.
+Public loadout publication and route parity are on the roadmap and intentionally outside the current system surface.
