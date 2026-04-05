@@ -21,6 +21,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build changelog
+        uses: skillcraft-gg/docs/.github/actions/build-changelog@main
 
       - name: Install build dependencies
         run: |
@@ -32,8 +42,9 @@ jobs:
 
       - name: Prepare Pages artifact
         run: |
-          mkdir -p publish
+          mkdir -p publish/meta
           cp skillcraft.pdf publish/
+          cp meta/changelog.json publish/meta/changelog.json
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
