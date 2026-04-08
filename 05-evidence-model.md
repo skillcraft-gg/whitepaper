@@ -13,6 +13,8 @@ The capture sequence is:
 
 The proof payload includes commit hash, captured skills, optional loadout context, and timestamp.
 
+The proof branch is maintained as separate Git history rather than branching from the repository's main development branch.
+
 **Evidence unit**: the combination of a commit trailer and a proof object that binds activity to verifiable state.
 
 Loadout context is important because it captures process intent.
